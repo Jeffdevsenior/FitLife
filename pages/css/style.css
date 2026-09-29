@@ -836,3 +836,139 @@ footer {
         gap: 25px;
     }
 }
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Estilos da Nova Página: IMC
+   ========================================================================== */
+
+.introducao-imc {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.introducao-imc h1 {
+    font-size: 32px;
+    color: var(--cor-texto, #2D2D2D);
+    margin-bottom: 10px;
+}
+
+.introducao-imc p {
+    color: #666;
+    font-size: 16px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.secao-imc {
+    width: 100%;
+}
+
+.imc-container {
+    background-color: var(--cor-card, #FFFFFF);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+    border: 1px solid #EBF0F3;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.imc-bloco-formulario, .imc-bloco-tabela {
+    flex: 1;
+    min-width: 280px;
+}
+
+.imc-bloco-formulario h2, .imc-bloco-tabela h3 {
+    color: var(--cor-texto, #2D2D2D);
+    margin-bottom: 15px;
+}
+
+.imc-bloco-formulario p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.grupo-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.grupo-campo label {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--cor-texto, #2D2D2D);
+}
+
+.grupo-campo input {
+    padding: 12px;
+    border: 2px solid #EBF0F3;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: var(--cor-fundo, #F4F7F9);
+}
+
+.grupo-campo input:focus {
+    outline: none;
+    border-color: var(--cor-primaria, #967BB6);
+}
+
+.btn-imc-desabilitado {
+    background-color: #E2E8F0;
+    color: #718096;
+    border: none;
+    padding: 14px;
+    width: 100%;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: not-allowed;
+}
+
+.tabela-imc {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.tabela-imc th, .tabela-imc td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.tabela-imc th {
+    background-color: #F0ECF6;
+    color: var(--cor-destaque, #6F5499);
+    font-weight: 700;
+    border-bottom: 2px solid var(--cor-primaria, #967BB6);
+}
+
+.tabela-imc td {
+    border-bottom: 1px solid #EBF0F3;
+}
+
+.linha-sucesso td {
+    background-color: #E6F4EA;
+    color: #137333;
+    font-weight: 600;
+}
+
+.linha-alerta td {
+    background-color: #FEF7E0;
+    color: #B06000;
+}
+
+.linha-perigo td {
+    background-color: #FCE8E6;
+    color: #C5221F;
+}

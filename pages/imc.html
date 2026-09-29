@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitLife - Cálculo de IMC</title>
+    <!-- Conecta com o seu CSS existente sem alterar nada nele -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- MENU DE NAVEGAÇÃO DA NOVA PÁGINA -->
+    <header class="navbar">
+        <div class="logo-area">
+            <span class="logo-texto">Fit<span class="roxo">Life</span></span>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <!-- Como este arquivo está dentro de 'pages', usamos '../' para voltar para a Home -->
+                <li><a href="index.html">Início</a></li>
+                <li><a href="exercicios.html">Exercícios</a></li>
+                <li><a href="habitos.html">Hábitos</a></li>
+                <li><a href="dicas.html">Dicas</a></li>
+                <li><a href="metas.html">Metas</a></li>
+                <li><a href="imc.html" class="active">IMC</a></li>
+                <li><a href="login.html" class="btn-login">Entrar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTEÚDO EXCLUSIVO DO IMC -->
+    <main class="container">
+        
+        <section class="introducao-imc">
+            <h1>Controle de IMC — ODS 3</h1>
+            <p>Monitore seu Índice de Massa Corporal para entender melhor sua composição física e buscar hábitos mais saudáveis.</p>
+        </section>
+
+        <section class="secao-imc">
+            <div class="imc-container">
+                
+                <!-- Formulário Visual do IMC -->
+                <div class="imc-bloco-formulario">
+                    <h2>Simulador de IMC</h2>
+                    <p>Digite seus dados abaixo para simular o cálculo. Esta seção representa a interface do módulo de monitoramento.</p>
+                    
+                    <form class="formulario-imc-estatico" onsubmit="return false;">
+                        <div class="grupo-campo">
+                            <label for="peso">Seu Peso (kg):</label>
+                            <input type="number" id="peso" placeholder="Ex: 70" step="0.1" required>
+                        </div>
+                        
+                        <div class="grupo-campo">
+                            <label for="altura">Sua Altura (m):</label>
+                            <input type="number" id="altura" placeholder="Ex: 1.75" step="0.01" required>
+                        </div>
+                        
+                        <button type="button" class="btn-imc-desabilitado">Calcular (Disponível em breve via JS)</button>
+                    </form>
+                </div>
+
+                <!-- Tabela de Classificação da OMS -->
+                <div class="imc-bloco-tabela">
+                    <h3>Tabela de Classificação</h3>
+                    <table class="tabela-imc">
+                        <thead>
+                            <tr>
+                                <th>Resultado do IMC</th>
+                                <th>Classificação</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="linha-alerta">
+                                <td>Abaixo de 18,5</td>
+                                <td>Abaixo do peso</td>
+                            </tr>
+                            <tr class="linha-sucesso">
+                                <td>Entre 18,5 e 24,9</td>
+                                <td>Peso normal (Ideal)</td>
+                            </tr>
+                            <tr class="linha-alerta">
+                                <td>Entre 25,0 e 29,9</td>
+                                <td>Sobrepeso</td>
+                            </tr>
+                            <tr class="linha-perigo">
+                                <td>Entre 30,0 e 34,9</td>
+                                <td>Obesidade Grau I</td>
+                            </tr>
+                            <tr class="linha-perigo">
+                                <td>Acima de 35,0</td>
+                                <td>Obesidade Grau II / Severa</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+        <p>&copy; 2026 FitLife - Projeto Escolar FIEB | ODS 3: Saúde e Bem-Estar</p>
+    </footer>
+
+</body>
+</html>
