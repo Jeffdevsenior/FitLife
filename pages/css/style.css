@@ -972,3 +972,970 @@ footer {
     background-color: #FCE8E6;
     color: #C5221F;
 }
+
+
+/* ============================================================
+   FITLIFE — CAMADA VISUAL TECNOLÓGICA
+   Mantém as mesmas classes e estrutura do projeto.
+   ============================================================ */
+
+:root {
+    --cor-fundo-tech: #F4F7F9;
+    --cor-card-tech: rgba(255, 255, 255, 0.78);
+    --cor-primaria-tech: #967BB6;
+    --cor-destaque-tech: #6F5499;
+    --cor-neon-tech: #B99AFF;
+    --cor-ciano-tech: #7DE7FF;
+    --cor-texto-tech: #202331;
+    --borda-tech: rgba(150, 123, 182, 0.22);
+    --sombra-tech: 0 12px 35px rgba(65, 45, 90, 0.12);
+    --glow-tech: 0 0 22px rgba(185, 154, 255, 0.28);
+}
+
+/* Fundo tecnológico */
+body {
+    background:
+        radial-gradient(circle at 10% 10%, rgba(185, 154, 255, 0.13), transparent 28%),
+        radial-gradient(circle at 90% 20%, rgba(125, 231, 255, 0.10), transparent 25%),
+        radial-gradient(circle at 50% 100%, rgba(150, 123, 182, 0.10), transparent 30%),
+        linear-gradient(135deg, #F4F7F9 0%, #F8F9FC 45%, #EEF2F7 100%);
+    color: var(--cor-texto-tech);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Grade futurista muito sutil */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.28;
+    background-image:
+        linear-gradient(rgba(150, 123, 182, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(150, 123, 182, 0.045) 1px, transparent 1px);
+    background-size: 42px 42px;
+}
+
+/* Barra superior */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1px solid var(--borda-tech);
+    box-shadow: 0 8px 30px rgba(50, 40, 70, 0.08);
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--cor-neon-tech), var(--cor-ciano-tech), transparent);
+    opacity: 0.75;
+}
+
+/* Logo */
+.logo h1 {
+    position: relative;
+    color: var(--cor-primaria-tech);
+    text-shadow: 0 0 16px rgba(150, 123, 182, 0.25);
+    transition: 0.3s ease;
+}
+
+.logo h1:hover {
+    text-shadow: 0 0 24px rgba(185, 154, 255, 0.55);
+    transform: translateY(-1px);
+}
+
+.logo span {
+    color: var(--cor-destaque-tech);
+}
+
+/* Navegação */
+nav a {
+    position: relative;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -7px;
+    width: 0;
+    height: 2px;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, var(--cor-neon-tech), var(--cor-ciano-tech));
+    box-shadow: 0 0 10px rgba(185, 154, 255, 0.65);
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--cor-destaque-tech);
+    text-shadow: 0 0 12px rgba(150, 123, 182, 0.35);
+}
+
+nav a:hover::after {
+    width: 75%;
+}
+
+/* Botões */
+.btn-login,
+.btn-principal,
+.btn-entrar {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    background: linear-gradient(135deg, #967BB6, #6F5499);
+    box-shadow: 0 8px 22px rgba(111, 84, 153, 0.22);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.btn-login::before,
+.btn-principal::before,
+.btn-entrar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 80%;
+    height: 100%;
+    transform: skewX(-25deg);
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.32), transparent);
+    transition: left 0.55s ease;
+}
+
+.btn-login:hover,
+.btn-principal:hover,
+.btn-entrar:hover {
+    background: linear-gradient(135deg, #A88DC7, #6F5499);
+    transform: translateY(-2px);
+    filter: brightness(1.05);
+    box-shadow: 0 12px 30px rgba(111, 84, 153, 0.32), 0 0 18px rgba(185, 154, 255, 0.18);
+}
+
+.btn-login:hover::before,
+.btn-principal:hover::before,
+.btn-entrar:hover::before {
+    left: 130%;
+}
+
+/* Hero */
+.hero {
+    position: relative;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.68);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--borda-tech);
+    box-shadow: var(--sombra-tech);
+}
+
+.hero::before,
+.hero::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.hero::before {
+    width: 220px;
+    height: 220px;
+    top: -130px;
+    right: -80px;
+    background: rgba(185, 154, 255, 0.16);
+    filter: blur(8px);
+}
+
+.hero::after {
+    width: 180px;
+    height: 180px;
+    bottom: -120px;
+    left: -70px;
+    background: rgba(125, 231, 255, 0.12);
+    filter: blur(8px);
+}
+
+.hero h2,
+.ods h2,
+.modulos h2,
+.sobre h2,
+.titulo-pagina h2,
+.exercicios-secao h3,
+.habito-card h3,
+.dica-tag,
+.meta-card h3,
+.resumo-numero {
+    text-shadow: 0 0 16px rgba(150, 123, 182, 0.18);
+}
+
+/* Cards gerais */
+.card,
+.exercicio-card,
+.habito-card,
+.dica-card,
+.meta-card,
+.login-box,
+.resumo-semana,
+.dica-habito,
+.imc-container {
+    background: var(--cor-card-tech);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid var(--borda-tech);
+    box-shadow: var(--sombra-tech);
+    position: relative;
+    overflow: hidden;
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+/* Linha luminosa nos cards */
+.card::before,
+.exercicio-card::before,
+.habito-card::before,
+.dica-card::before,
+.meta-card::before,
+.login-box::before,
+.resumo-semana::before,
+.dica-habito::before,
+.imc-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 12%;
+    right: 12%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--cor-neon-tech), var(--cor-ciano-tech), transparent);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.card:hover,
+.exercicio-card:hover,
+.habito-card:hover,
+.dica-card:hover,
+.meta-card:hover,
+.login-box:hover,
+.resumo-semana:hover,
+.dica-habito:hover,
+.imc-container:hover {
+    transform: translateY(-7px);
+    border-color: rgba(185, 154, 255, 0.42);
+    box-shadow:
+        0 18px 42px rgba(65, 45, 90, 0.15),
+        0 0 24px rgba(185, 154, 255, 0.10);
+}
+
+.card:hover::before,
+.exercicio-card:hover::before,
+.habito-card:hover::before,
+.dica-card:hover::before,
+.meta-card:hover::before,
+.login-box:hover::before,
+.resumo-semana:hover::before,
+.dica-habito:hover::before,
+.imc-container:hover::before {
+    opacity: 1;
+}
+
+/* Área de exercício */
+.exercicio-img {
+    background:
+        radial-gradient(circle, rgba(185, 154, 255, 0.16), transparent 65%),
+        rgba(244, 247, 249, 0.75);
+    border: 1px solid rgba(150, 123, 182, 0.13);
+    box-shadow: inset 0 0 22px rgba(150, 123, 182, 0.06);
+}
+
+/* Hábitos */
+.check-habito span {
+    transition: all 0.3s ease;
+}
+
+.check-habito span:hover {
+    border-color: var(--cor-primaria-tech);
+    box-shadow: 0 0 15px rgba(150, 123, 182, 0.16);
+    transform: translateY(-1px);
+}
+
+.check-habito input:checked + span {
+    background: linear-gradient(135deg, #967BB6, #6F5499);
+    border-color: #967BB6;
+    box-shadow: 0 0 18px rgba(150, 123, 182, 0.30);
+}
+
+/* Tags */
+.dica-tag {
+    background: linear-gradient(135deg, #967BB6, #6F5499);
+    box-shadow: 0 5px 16px rgba(111, 84, 153, 0.20);
+}
+
+/* Barra de progresso */
+.barra {
+    background: rgba(224, 224, 224, 0.65);
+    border: 1px solid rgba(150, 123, 182, 0.12);
+}
+
+.preenchido {
+    background: linear-gradient(90deg, #967BB6, #B99AFF, #7DE7FF);
+    background-size: 200% 100%;
+    box-shadow: 0 0 14px rgba(185, 154, 255, 0.42);
+    animation: progressoTech 3s linear infinite;
+}
+
+@keyframes progressoTech {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+}
+
+/* Login */
+.login-area {
+    position: relative;
+}
+
+.login-area::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(185,154,255,0.14), transparent 68%);
+    animation: orbTech 6s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.login-box input,
+.grupo-campo input {
+    background: rgba(244, 247, 249, 0.72);
+    border: 1px solid rgba(150, 123, 182, 0.20);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.login-box input:focus,
+.grupo-campo input:focus {
+    background: rgba(255,255,255,0.9);
+    border-color: var(--cor-primaria-tech);
+    box-shadow: 0 0 0 4px rgba(150, 123, 182, 0.10), 0 0 18px rgba(185, 154, 255, 0.16);
+}
+
+/* Tabelas */
+.tabela-imc {
+    border: 1px solid rgba(150, 123, 182, 0.14);
+    overflow: hidden;
+}
+
+.tabela-imc th {
+    background: linear-gradient(135deg, #F0ECF6, #EAF4F7);
+}
+
+.tabela-imc tr {
+    transition: background 0.25s ease;
+}
+
+.tabela-imc tr:hover td {
+    background-color: rgba(185, 154, 255, 0.07);
+}
+
+/* Rodapé */
+footer {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #6F5499, #967BB6);
+    box-shadow: 0 -8px 30px rgba(65, 45, 90, 0.12);
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -10%;
+    width: 120%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #B99AFF, #7DE7FF, transparent);
+    box-shadow: 0 0 14px rgba(125, 231, 255, 0.45);
+}
+
+/* Pequena animação de entrada */
+.hero,
+.card,
+.exercicio-card,
+.habito-card,
+.dica-card,
+.meta-card,
+.login-box,
+.resumo-semana,
+.dica-habito,
+.imc-container {
+    animation: aparecerTech 0.65s ease both;
+}
+
+@keyframes aparecerTech {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes orbTech {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+    }
+    50% {
+        transform: translate(18px, -12px) scale(1.06);
+    }
+}
+
+/* Acessibilidade: reduz animações quando solicitado pelo sistema */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Responsividade extra */
+@media (max-width: 768px) {
+    header {
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+    }
+
+    .hero {
+        margin: 20px;
+    }
+
+    .hero h2 {
+        text-shadow: 0 0 12px rgba(150, 123, 182, 0.18);
+    }
+}
+
+@media (max-width: 480px) {
+    body::before {
+        background-size: 30px 30px;
+    }
+
+    .card,
+    .exercicio-card,
+    .habito-card,
+    .dica-card,
+    .meta-card {
+        box-shadow: 0 10px 25px rgba(65, 45, 90, 0.10);
+    }
+}
+
+
+
+
+
+
+
+
+/* ==========================================================
+   BANNERS TECNOLÓGICOS - FITLIFE
+   ========================================================== */
+
+/* ---------- BANNER PRINCIPAL ---------- */
+
+.banner-tech {
+    position: relative;
+    max-width: 1200px;
+    min-height: 390px;
+    margin: 40px auto;
+    padding: 55px 60px;
+    border-radius: 28px;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background:
+        radial-gradient(circle at 85% 30%, rgba(125, 231, 255, 0.22), transparent 25%),
+        radial-gradient(circle at 70% 80%, rgba(185, 154, 255, 0.25), transparent 30%),
+        linear-gradient(135deg, #6F5499, #967BB6 55%, #6F5499);
+
+    box-shadow:
+        0 20px 50px rgba(76, 52, 110, 0.25),
+        inset 0 1px rgba(255,255,255,0.25);
+
+    color: white;
+}
+
+/* brilho superior */
+.banner-tech::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    right: -180px;
+    top: -220px;
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,0.18);
+    box-shadow:
+        0 0 50px rgba(185,154,255,0.15),
+        inset 0 0 50px rgba(125,231,255,0.08);
+}
+
+/* grade tecnológica */
+.banner-tech::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+
+    background-size: 35px 35px;
+    pointer-events: none;
+}
+
+.banner-conteudo {
+    position: relative;
+    z-index: 5;
+    max-width: 620px;
+}
+
+.banner-label {
+    display: inline-block;
+    margin-bottom: 15px;
+
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    color: #DCCEFF;
+}
+
+.banner-tech h2 {
+    margin-bottom: 18px;
+
+    font-size: clamp(32px, 4vw, 52px);
+    line-height: 1.05;
+
+    color: #FFFFFF;
+}
+
+.banner-tech p {
+    max-width: 600px;
+    margin-bottom: 28px;
+
+    font-size: 17px;
+    line-height: 1.7;
+
+    color: rgba(255,255,255,0.86);
+}
+
+/* ---------- VISUAL ABSTRATO ---------- */
+
+.banner-visual {
+    position: relative;
+    width: 360px;
+    height: 300px;
+    flex-shrink: 0;
+}
+
+.banner-orb {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.banner-orb-1 {
+    width: 190px;
+    height: 190px;
+    top: 50px;
+    left: 75px;
+
+    background:
+        radial-gradient(circle at 35% 30%,
+        rgba(255,255,255,0.45),
+        rgba(185,154,255,0.28) 30%,
+        rgba(125,231,255,0.12) 65%,
+        transparent 70%);
+
+    border: 1px solid rgba(255,255,255,0.25);
+
+    box-shadow:
+        0 0 45px rgba(185,154,255,0.35),
+        inset 0 0 30px rgba(255,255,255,0.12);
+
+    animation: orbFloat 5s ease-in-out infinite;
+}
+
+.banner-orb-2 {
+    width: 75px;
+    height: 75px;
+    top: 15px;
+    right: 25px;
+
+    background: rgba(125,231,255,0.18);
+    border: 1px solid rgba(125,231,255,0.4);
+
+    box-shadow: 0 0 30px rgba(125,231,255,0.35);
+
+    animation: orbFloat 4s ease-in-out infinite reverse;
+}
+
+.banner-orb-3 {
+    width: 45px;
+    height: 45px;
+    bottom: 35px;
+    left: 20px;
+
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.3);
+
+    box-shadow: 0 0 20px rgba(255,255,255,0.2);
+
+    animation: orbFloat 3s ease-in-out infinite;
+}
+
+/* linhas orbitais */
+
+.banner-orbit {
+    position: absolute;
+    width: 300px;
+    height: 130px;
+
+    top: 80px;
+    left: 30px;
+
+    border: 1px solid rgba(255,255,255,0.22);
+    border-radius: 50%;
+
+    transform: rotate(-25deg);
+}
+
+.banner-orbit-2 {
+    transform: rotate(25deg);
+}
+
+/* pontos tecnológicos */
+
+.banner-dot {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+    background: #B99AFF;
+
+    box-shadow: 0 0 15px #B99AFF;
+}
+
+.banner-dot-1 {
+    top: 70px;
+    left: 45px;
+}
+
+.banner-dot-2 {
+    right: 15px;
+    bottom: 80px;
+    background: #7DE7FF;
+    box-shadow: 0 0 15px #7DE7FF;
+}
+
+.banner-dot-3 {
+    left: 130px;
+    bottom: 20px;
+}
+
+
+/* ---------- BANNER SECUNDÁRIO ---------- */
+
+.banner-abstrato {
+    position: relative;
+
+    max-width: 1100px;
+    min-height: 230px;
+
+    margin: 60px auto;
+    padding: 45px 50px;
+
+    border-radius: 24px;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background:
+        linear-gradient(120deg,
+        rgba(255,255,255,0.9),
+        rgba(244,247,249,0.75));
+
+    border: 1px solid rgba(150,123,182,0.25);
+
+    box-shadow:
+        0 15px 40px rgba(65,45,90,0.10),
+        inset 0 0 30px rgba(185,154,255,0.04);
+}
+
+.banner-abstrato::before {
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    right: -80px;
+    top: -130px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle,
+        rgba(185,154,255,0.35),
+        rgba(125,231,255,0.12),
+        transparent 70%);
+
+    filter: blur(3px);
+}
+
+.banner-abstrato-conteudo {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+}
+
+.banner-abstrato span {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    color: #967BB6;
+}
+
+.banner-abstrato h2 {
+    margin: 10px 0;
+
+    font-size: 30px;
+    color: #2D2D2D;
+}
+
+.banner-abstrato p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+
+/* ---------- BANNERS DAS PÁGINAS ---------- */
+
+.banner-pagina {
+    position: relative;
+
+    max-width: 1100px;
+    min-height: 220px;
+
+    margin: 30px auto 45px;
+    padding: 45px 55px;
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        radial-gradient(circle at 90% 50%,
+        rgba(125,231,255,0.16),
+        transparent 28%),
+        radial-gradient(circle at 70% 20%,
+        rgba(185,154,255,0.18),
+        transparent 30%),
+        linear-gradient(135deg,#FFFFFF,#F3F0F8);
+
+    border: 1px solid rgba(150,123,182,0.22);
+
+    box-shadow:
+        0 15px 40px rgba(65,45,90,0.10);
+}
+
+.banner-pagina::after {
+    content: "";
+
+    position: absolute;
+
+    right: -80px;
+    top: -100px;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(150,123,182,0.15);
+
+    box-shadow:
+        0 0 0 25px rgba(150,123,182,0.035),
+        0 0 0 50px rgba(150,123,182,0.025);
+}
+
+.banner-pagina-conteudo {
+    position: relative;
+    z-index: 2;
+    max-width: 720px;
+}
+
+.banner-pagina-label {
+    color: #967BB6;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.banner-pagina h2 {
+    margin: 10px 0;
+
+    font-size: 34px;
+
+    color: #2D2D2D;
+}
+
+.banner-pagina p {
+    color: #666;
+    font-size: 16px;
+    max-width: 650px;
+}
+
+
+/* ---------- LOGIN ---------- */
+
+.login-banner {
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 30% 40%,
+        rgba(125,231,255,0.18),
+        transparent 30%),
+        linear-gradient(135deg,#6F5499,#967BB6);
+
+    color: white;
+}
+
+.login-banner::before {
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    right: -120px;
+    top: -120px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,0.22);
+
+    box-shadow:
+        0 0 0 30px rgba(255,255,255,0.03),
+        0 0 0 60px rgba(255,255,255,0.025);
+}
+
+.login-banner h2 {
+    color: white;
+}
+
+.login-banner p {
+    color: rgba(255,255,255,0.82);
+}
+
+
+/* ---------- ANIMAÇÕES ---------- */
+
+@keyframes orbFloat {
+
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-12px) scale(1.04);
+    }
+
+}
+
+
+/* ---------- RESPONSIVIDADE ---------- */
+
+@media (max-width: 800px) {
+
+    .banner-tech {
+        margin: 25px 20px;
+        padding: 40px 30px;
+    }
+
+    .banner-visual {
+        display: none;
+    }
+
+    .banner-tech h2 {
+        font-size: 34px;
+    }
+
+    .banner-abstrato,
+    .banner-pagina {
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 35px 30px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .banner-tech {
+        min-height: 350px;
+        padding: 35px 25px;
+        border-radius: 20px;
+    }
+
+    .banner-tech h2 {
+        font-size: 29px;
+    }
+
+    .banner-tech p {
+        font-size: 15px;
+    }
+
+    .banner-abstrato,
+    .banner-pagina {
+        padding: 30px 25px;
+        border-radius: 20px;
+    }
+
+    .banner-pagina h2,
+    .banner-abstrato h2 {
+        font-size: 26px;
+    }
+
+}
