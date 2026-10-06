@@ -1,8 +1,8 @@
-/* ============================================
-   CONFIGURAÇÕES GERAIS
-   ============================================
 
-*/
+
+
+
+
 
 * {
     margin: 0;          
@@ -17,11 +17,11 @@ body {
     line-height: 1.6;          
 }
 
-/* ============================================
-   Cabeçalho
-   ============================================
+
+
+
    
-*/
+
 
 header {
     background-color: #FFFFFF; 
@@ -42,11 +42,11 @@ header {
     color: #6F5499;           
 }
 
-/* ============================================
-   NAVEGAÇÃO
-   ============================================
+
+
+
   
-*/
+
 
 nav ul {
     list-style: none;          
@@ -65,7 +65,7 @@ nav a:hover {
     color: #967BB6;            
 }
 
-/* Botão de login no menu */
+
 .btn-login {
     background-color: #967BB6;
     color: #FFFFFF !important; 
@@ -77,11 +77,11 @@ nav a:hover {
     background-color: #6F5499;
 }
 
-/* ============================================
-   Banner de boas-vindas
-   ============================================
+
+
+
    
-*/
+
 
 .hero {
     text-align: center;       
@@ -120,10 +120,10 @@ nav a:hover {
     background-color: #6F5499; 
 }
 
-/* ============================================
-   SEÇÃO ODS 3
-   ============================================
-*/
+
+
+
+
 
 .ods {
     text-align: center;
@@ -142,11 +142,11 @@ nav a:hover {
     font-size: 17px;
 }
 
-/* ============================================
-   MÓDULOS 
-   ============================================
+
+
+
   
-*/
+
 
 .modulos {
     padding: 40px 20px;
@@ -204,10 +204,10 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* ============================================
-   SOBRE O PROJETO
-   ============================================
-*/
+
+
+
+
 
 .sobre {
     text-align: center;
@@ -228,10 +228,10 @@ nav a:hover {
     font-size: 16px;
 }
 
-/* ============================================
-   Rodapé
-   ============================================
-*/
+
+
+
+
 
 footer {
     text-align: center;
@@ -241,11 +241,11 @@ footer {
     font-size: 14px;
 }
 
-/* ============================================
-   RESPONSIVIDADE 
-   ============================================
+
+
+
   
-*/
+
 
 @media (max-width: 768px) {
     
@@ -289,9 +289,9 @@ footer {
 
 
 
-/* ============================================
-   LOGIN
-   ============================================ */
+
+
+
 
 .login-area {
     display: flex;
@@ -381,9 +381,9 @@ footer {
     text-decoration: underline;
 }
 
-/* ============================================
-   TÍTULO DAS PÁGINAS
-   ============================================ */
+
+
+
 
 .titulo-pagina {
     text-align: center;
@@ -408,9 +408,9 @@ footer {
 
 
 
-/* ============================================
-   SEÇÃO DE EXERCÍCIOS
-   ============================================ */
+
+
+
 
 .exercicios-secao {
     padding: 30px 40px;
@@ -430,14 +430,14 @@ footer {
     margin-bottom: 25px;
 }
 
-/* Grade dos exercícios */
+
 .exercicios-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colunas no computador */
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
 
-/* Card de cada exercício */
+
 .exercicio-card {
     background-color: #FFFFFF;
     border-radius: 16px;
@@ -451,7 +451,7 @@ footer {
     transform: translateY(-5px);
 }
 
-/* Área da imagem/emoji */
+
 .exercicio-img {
     font-size: 50px;
     margin-bottom: 15px;
@@ -472,13 +472,13 @@ footer {
     font-weight: 600;
 }
 
-/* ============================================
-   RESPONSIVIDADE EXERCÍCIOS
-   ============================================ */
+
+
+
 
 @media (max-width: 768px) {
     .exercicios-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 colunas no tablet */
+        grid-template-columns: repeat(2, 1fr);
     }
     
     .exercicios-secao {
@@ -488,7 +488,7 @@ footer {
 
 @media (max-width: 480px) {
     .exercicios-grid {
-        grid-template-columns: 1fr; /* 1 coluna no celular */
+        grid-template-columns: 1fr;
     }
 }
 
@@ -499,13 +499,13 @@ footer {
 
 
 
-/* ============================================
-   HÁBITOS
-   ============================================ */
+
+
+
 
 .habitos-secao {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 cards lado a lado */
+    grid-template-columns: repeat(4, 1fr);
     gap: 25px;
     max-width: 1100px;
     margin: 0 auto;
@@ -542,14 +542,14 @@ footer {
     margin-bottom: 20px;
 }
 
-/* Checkbox estilizada */
+
 .check-habito {
     display: inline-block;
     cursor: pointer;
 }
 
 .check-habito input {
-    display: none; /* esconde a caixinha padrão feia do navegador */
+    display: none;
 }
 
 .check-habito span {
@@ -564,14 +564,14 @@ footer {
     transition: all 0.3s;
 }
 
-/* Quando marca o checkbox, muda a cor do botão */
+
 .check-habito input:checked + span {
     background-color: #967BB6;
     color: #FFFFFF;
     border-color: #967BB6;
 }
 
-/* Dica do dia */
+
 .dica-habito {
     background-color: #FFFFFF;
     max-width: 700px;
@@ -594,19 +594,19 @@ footer {
     font-size: 16px;
 }
 
-/* ============================================
-   RESPONSIVIDADE HÁBITOS
-   ============================================ */
+
+
+
 
 @media (max-width: 900px) {
     .habitos-secao {
-        grid-template-columns: repeat(2, 1fr); /* 2 colunas no tablet */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 480px) {
     .habitos-secao {
-        grid-template-columns: 1fr; /* 1 coluna no celular */
+        grid-template-columns: 1fr;
         padding: 20px;
     }
 }
@@ -624,13 +624,13 @@ footer {
 
 
 
-/* ============================================
-   DICAS
-   ============================================ */
+
+
+
 
 .dicas-secao {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
     max-width: 1100px;
     margin: 0 auto;
@@ -651,7 +651,7 @@ footer {
     transform: translateY(-5px);
 }
 
-/* Tag colorida no topo do card */
+
 .dica-tag {
     display: inline-block;
     background-color: #967BB6;
@@ -661,7 +661,7 @@ footer {
     padding: 5px 14px;
     border-radius: 20px;
     margin-bottom: 15px;
-    align-self: flex-start; /* fica do tamanho do texto */
+    align-self: flex-start;
 }
 
 .dica-card h3 {
@@ -674,7 +674,7 @@ footer {
     color: #555;
     font-size: 15px;
     line-height: 1.6;
-    flex-grow: 1; /* empurra a data para baixo */
+    flex-grow: 1;
     margin-bottom: 15px;
 }
 
@@ -683,19 +683,19 @@ footer {
     font-size: 13px;
 }
 
-/* ============================================
-   RESPONSIVIDADE DICAS
-   ============================================ */
+
+
+
 
 @media (max-width: 900px) {
     .dicas-secao {
-        grid-template-columns: repeat(2, 1fr); /* 2 colunas no tablet */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 480px) {
     .dicas-secao {
-        grid-template-columns: 1fr; /* 1 coluna no celular */
+        grid-template-columns: 1fr;
         padding: 20px;
     }
 }
@@ -713,13 +713,13 @@ footer {
 
 
 
-/* ============================================
-   METAS
-   ============================================ */
+
+
+
 
 .metas-secao {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    grid-template-columns: repeat(2, 1fr);
     gap: 25px;
     max-width: 800px;
     margin: 0 auto;
@@ -750,7 +750,7 @@ footer {
     margin-bottom: 20px;
 }
 
-/* Barra de progresso */
+
 .progresso {
     display: flex;
     align-items: center;
@@ -758,18 +758,18 @@ footer {
 }
 
 .barra {
-    flex-grow: 1; /* ocupa todo o espaço disponível */
+    flex-grow: 1;
     height: 12px;
     background-color: #E0E0E0;
     border-radius: 10px;
-    overflow: hidden; /* esconde o que passar da borda */
+    overflow: hidden;
 }
 
 .preenchido {
     height: 100%;
     background-color: #967BB6;
     border-radius: 10px;
-    transition: width 0.5s; /* animação suave */
+    transition: width 0.5s;
 }
 
 .porcentagem {
@@ -780,7 +780,7 @@ footer {
     text-align: right;
 }
 
-/* Resumo da semana */
+
 .resumo-semana {
     background-color: #FFFFFF;
     max-width: 800px;
@@ -822,13 +822,13 @@ footer {
     color: #666;
 }
 
-/* ============================================
-   RESPONSIVIDADE METAS
-   ============================================ */
+
+
+
 
 @media (max-width: 600px) {
     .metas-secao {
-        grid-template-columns: 1fr; /* 1 coluna no celular */
+        grid-template-columns: 1fr;
         padding: 20px;
     }
     
@@ -844,9 +844,9 @@ footer {
 
 
 
-/* ==========================================================================
-   Estilos da Nova Página: IMC
-   ========================================================================== */
+
+
+
 
 .introducao-imc {
     text-align: center;
@@ -974,10 +974,10 @@ footer {
 }
 
 
-/* ============================================================
-   FITLIFE — CAMADA VISUAL TECNOLÓGICA
-   Mantém as mesmas classes e estrutura do projeto.
-   ============================================================ */
+
+
+
+
 
 :root {
     --cor-fundo-tech: #F4F7F9;
@@ -992,7 +992,7 @@ footer {
     --glow-tech: 0 0 22px rgba(185, 154, 255, 0.28);
 }
 
-/* Fundo tecnológico */
+
 body {
     background:
         radial-gradient(circle at 10% 10%, rgba(185, 154, 255, 0.13), transparent 28%),
@@ -1004,7 +1004,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Grade futurista muito sutil */
+
 body::before {
     content: "";
     position: fixed;
@@ -1018,7 +1018,7 @@ body::before {
     background-size: 42px 42px;
 }
 
-/* Barra superior */
+
 header {
     position: sticky;
     top: 0;
@@ -1041,7 +1041,7 @@ header::after {
     opacity: 0.75;
 }
 
-/* Logo */
+
 .logo h1 {
     position: relative;
     color: var(--cor-primaria-tech);
@@ -1058,7 +1058,7 @@ header::after {
     color: var(--cor-destaque-tech);
 }
 
-/* Navegação */
+
 nav a {
     position: relative;
     transition: color 0.3s ease, text-shadow 0.3s ease;
@@ -1086,7 +1086,7 @@ nav a:hover::after {
     width: 75%;
 }
 
-/* Botões */
+
 .btn-login,
 .btn-principal,
 .btn-entrar {
@@ -1127,7 +1127,7 @@ nav a:hover::after {
     left: 130%;
 }
 
-/* Hero */
+
 .hero {
     position: relative;
     overflow: hidden;
@@ -1177,7 +1177,7 @@ nav a:hover::after {
     text-shadow: 0 0 16px rgba(150, 123, 182, 0.18);
 }
 
-/* Cards gerais */
+
 .card,
 .exercicio-card,
 .habito-card,
@@ -1200,7 +1200,7 @@ nav a:hover::after {
         border-color 0.35s ease;
 }
 
-/* Linha luminosa nos cards */
+
 .card::before,
 .exercicio-card::before,
 .habito-card::before,
@@ -1249,7 +1249,7 @@ nav a:hover::after {
     opacity: 1;
 }
 
-/* Área de exercício */
+
 .exercicio-img {
     background:
         radial-gradient(circle, rgba(185, 154, 255, 0.16), transparent 65%),
@@ -1258,7 +1258,7 @@ nav a:hover::after {
     box-shadow: inset 0 0 22px rgba(150, 123, 182, 0.06);
 }
 
-/* Hábitos */
+
 .check-habito span {
     transition: all 0.3s ease;
 }
@@ -1275,13 +1275,13 @@ nav a:hover::after {
     box-shadow: 0 0 18px rgba(150, 123, 182, 0.30);
 }
 
-/* Tags */
+
 .dica-tag {
     background: linear-gradient(135deg, #967BB6, #6F5499);
     box-shadow: 0 5px 16px rgba(111, 84, 153, 0.20);
 }
 
-/* Barra de progresso */
+
 .barra {
     background: rgba(224, 224, 224, 0.65);
     border: 1px solid rgba(150, 123, 182, 0.12);
@@ -1299,7 +1299,7 @@ nav a:hover::after {
     100% { background-position: 200% 50%; }
 }
 
-/* Login */
+
 .login-area {
     position: relative;
 }
@@ -1329,7 +1329,7 @@ nav a:hover::after {
     box-shadow: 0 0 0 4px rgba(150, 123, 182, 0.10), 0 0 18px rgba(185, 154, 255, 0.16);
 }
 
-/* Tabelas */
+
 .tabela-imc {
     border: 1px solid rgba(150, 123, 182, 0.14);
     overflow: hidden;
@@ -1347,7 +1347,7 @@ nav a:hover::after {
     background-color: rgba(185, 154, 255, 0.07);
 }
 
-/* Rodapé */
+
 footer {
     position: relative;
     overflow: hidden;
@@ -1366,7 +1366,7 @@ footer::before {
     box-shadow: 0 0 14px rgba(125, 231, 255, 0.45);
 }
 
-/* Pequena animação de entrada */
+
 .hero,
 .card,
 .exercicio-card,
@@ -1400,7 +1400,7 @@ footer::before {
     }
 }
 
-/* Acessibilidade: reduz animações quando solicitado pelo sistema */
+
 @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
@@ -1412,7 +1412,7 @@ footer::before {
     }
 }
 
-/* Responsividade extra */
+
 @media (max-width: 768px) {
     header {
         backdrop-filter: blur(14px);
@@ -1449,11 +1449,11 @@ footer::before {
 
 
 
-/* ==========================================================
-   BANNERS TECNOLÓGICOS - FITLIFE
-   ========================================================== */
 
-/* ---------- BANNER PRINCIPAL ---------- */
+
+
+
+
 
 .banner-tech {
     position: relative;
@@ -1480,7 +1480,7 @@ footer::before {
     color: white;
 }
 
-/* brilho superior */
+
 .banner-tech::before {
     content: "";
     position: absolute;
@@ -1496,7 +1496,7 @@ footer::before {
         inset 0 0 50px rgba(125,231,255,0.08);
 }
 
-/* grade tecnológica */
+
 .banner-tech::after {
     content: "";
     position: absolute;
@@ -1547,7 +1547,7 @@ footer::before {
     color: rgba(255,255,255,0.86);
 }
 
-/* ---------- VISUAL ABSTRATO ---------- */
+
 
 .banner-visual {
     position: relative;
@@ -1611,7 +1611,7 @@ footer::before {
     animation: orbFloat 3s ease-in-out infinite;
 }
 
-/* linhas orbitais */
+
 
 .banner-orbit {
     position: absolute;
@@ -1631,7 +1631,7 @@ footer::before {
     transform: rotate(25deg);
 }
 
-/* pontos tecnológicos */
+
 
 .banner-dot {
     position: absolute;
@@ -1662,7 +1662,7 @@ footer::before {
 }
 
 
-/* ---------- BANNER SECUNDÁRIO ---------- */
+
 
 .banner-abstrato {
     position: relative;
@@ -1741,7 +1741,7 @@ footer::before {
 }
 
 
-/* ---------- BANNERS DAS PÁGINAS ---------- */
+
 
 .banner-pagina {
     position: relative;
@@ -1825,7 +1825,7 @@ footer::before {
 }
 
 
-/* ---------- LOGIN ---------- */
+
 
 .login-banner {
     position: relative;
@@ -1870,7 +1870,7 @@ footer::before {
 }
 
 
-/* ---------- ANIMAÇÕES ---------- */
+
 
 @keyframes orbFloat {
 
@@ -1885,7 +1885,7 @@ footer::before {
 }
 
 
-/* ---------- RESPONSIVIDADE ---------- */
+
 
 @media (max-width: 800px) {
 
